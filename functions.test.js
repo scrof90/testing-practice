@@ -1,7 +1,7 @@
-import capitalize from './functions';
+import { capitalize, reverseString } from './functions';
 
 describe('capitalize()', () => {
-  test('empty sentence', () => {
+  test('empty string', () => {
     expect(capitalize('')).toBe('');
   });
 
@@ -33,5 +33,30 @@ describe('capitalize()', () => {
 
   test('numbers', () => {
     expect(capitalize('1234567890')).toBe('1234567890');
+  });
+});
+
+describe('reverseString()', () => {
+  test('empty string', () => {
+    expect(reverseString('')).toBe('');
+  });
+
+  test('one letter', () => {
+    expect(reverseString('a')).toBe('a');
+  });
+
+  test('palindrome', () => {
+    expect(reverseString('deified')).toBe('deified');
+  });
+
+  test('normal word', () => {
+    expect(reverseString('goblin')).toBe('nilbog');
+  });
+
+  test('normal sentence', () => {
+    const string = 'The quick brown fox jumps over the lazy dog';
+    expect(reverseString(string)).toBe(
+      'god yzal eht revo spmuj xof nworb kciuq ehT',
+    );
   });
 });

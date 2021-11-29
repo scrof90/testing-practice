@@ -5,4 +5,6 @@ const capitalize = (string) => {
   return firstLetter + theRest;
 };
 
-export default capitalize;
+const reverseString = (string) => string.split('').reverse().join('');
+
+export { capitalize, reverseString };
