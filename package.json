@@ -2,7 +2,7 @@
   "name": "testing-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "functions.js",
   "scripts": {
     "test": "jest",
     "watch": "jest --watch *.js"
