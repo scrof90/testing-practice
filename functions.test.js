@@ -67,16 +67,30 @@ describe('reverseString()', () => {
 
 describe('Calculator', () => {
   describe('add()', () => {
-    test('2 zeroes', () => {
-      expect(Calculator.add(0, 0)).toBe(0);
-    });
-
-    test('12315 and 986', () => {
+    test('two positive numbers', () => {
       expect(Calculator.add(12315, 986)).toBe(13301);
     });
 
-    test('-88 and 88', () => {
+    test('two negative numbers', () => {
+      expect(Calculator.add(-100, -32)).toBe(-132);
+    });
+
+    test('same number with different signs', () => {
       expect(Calculator.add(-88, 88)).toBe(0);
+    });
+  });
+
+  describe('subtract()', () => {
+    test('two positive numbers', () => {
+      expect(Calculator.subtract(12315, 986)).toBe(11329);
+    });
+
+    test('two negative numbers', () => {
+      expect(Calculator.subtract(-100, -32)).toBe(-68);
+    });
+
+    test('same number with different signs', () => {
+      expect(Calculator.subtract(-88, 88)).toBe(-176);
     });
   });
 });

@@ -13,7 +13,7 @@ class Calculator {
   }
 
   static subtract(a, b) {
-    return b - a;
+    return a - b;
   }
 
   static divide(a, b) {
