@@ -6,12 +6,16 @@ describe('caesarCipher()', () => {
       expect(caesarCipher('a')).toBe('b');
     });
 
-    test('"A" should become "B"', () => {
-      expect(caesarCipher('A')).toBe('B');
+    test('"B" should become "C"', () => {
+      expect(caesarCipher('B')).toBe('C');
     });
 
     test('edge case: "z" should wrap to "a"', () => {
       expect(caesarCipher('z')).toBe('a');
+    });
+
+    test('edge case: "Z" should wrap to "A"', () => {
+      expect(caesarCipher('Z')).toBe('A');
     });
   });
 });

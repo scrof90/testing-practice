@@ -3,43 +3,45 @@ const caesarCipher = (string) => {
   const cipher = {
     offsets: {
       normal: 1,
-      z: this.normal - 26,
-      space: this.normal - 1,
+      z: -25,
+      symbol: 0,
     },
 
     // character codes for edge cases
     charCodes: {
-      lowerZ: 122,
+      upperA: 65,
       upperZ: 90,
-      space: 32,
+      lowerA: 97,
+      lowerZ: 122,
     },
   };
 
-  const encryptedChars = [];
-  for (let i = 0; i < string.length; i += 1) {
-    const charCode = string.charCodeAt(i);
+  const encryptedString = string
+    .split('')
+    .map((char) => {
+      const charCode = char.charCodeAt(0);
 
-    // choose the correct character code offset according to case
-    let offset;
-    switch (charCode) {
-      case cipher.charCodes.space:
-        offset = cipher.offsets.space;
-        break;
-      case cipher.charCodes.lowerZ:
-      case cipher.charCodes.upperZ:
+      // choose the correct character code offset according to case
+      let offset;
+      if (
+        charCode < cipher.charCodes.upperA ||
+        charCode > cipher.charCodes.lowerZ
+      ) {
+        offset = cipher.offsets.symbol;
+      } else if (
+        charCode === cipher.charCodes.lowerZ ||
+        charCode === cipher.charCodes.upperZ
+      ) {
         offset = cipher.offsets.z;
-        break;
-      default:
+      } else {
         offset = cipher.offsets.normal;
-    }
+      }
 
-    // encrypt the character by applying the offset to its character code
-    const encryptedCharCode = charCode + offset;
-    const encryptedChar = String.fromCharCode(encryptedCharCode);
-
-    encryptedChars.push(encryptedChar);
-  }
-  const encryptedString = encryptedChars.join('');
+      // encrypt the character by applying the offset to its character code
+      const encryptedCharCode = charCode + offset;
+      return String.fromCharCode(encryptedCharCode);
+    })
+    .join('');
 
   return encryptedString;
 };
