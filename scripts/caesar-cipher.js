@@ -1,9 +1,8 @@
-const caesarCipher = (string, key = 1) => {
-
+const caesarCipher = (string) => {
   // map cipher rules to ascii character codes
   const cipher = {
     offsets: {
-      normal: key,
+      normal: 1,
       z: this.normal - 26,
       space: this.normal - 1,
     },
