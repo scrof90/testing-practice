@@ -1,4 +1,4 @@
-import { capitalize, reverseString, Calculator } from './functions';
+import { capitalize, reverseString } from '../scripts/functions';
 
 describe('capitalize()', () => {
   test('empty string', () => {
@@ -62,35 +62,5 @@ describe('reverseString()', () => {
     expect(reverseString(string)).toBe(
       'god yzal eht revo spmuj xof nworb kciuq ehT',
     );
-  });
-});
-
-describe('Calculator', () => {
-  describe('add()', () => {
-    test('two positive numbers', () => {
-      expect(Calculator.add(12315, 986)).toBe(13301);
-    });
-
-    test('two negative numbers', () => {
-      expect(Calculator.add(-100, -32)).toBe(-132);
-    });
-
-    test('same number with different signs', () => {
-      expect(Calculator.add(-88, 88)).toBe(0);
-    });
-  });
-
-  describe('subtract()', () => {
-    test('two positive numbers', () => {
-      expect(Calculator.subtract(12315, 986)).toBe(11329);
-    });
-
-    test('two negative numbers', () => {
-      expect(Calculator.subtract(-100, -32)).toBe(-68);
-    });
-
-    test('same number with different signs', () => {
-      expect(Calculator.subtract(-88, 88)).toBe(-176);
-    });
   });
 });
