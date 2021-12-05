@@ -5,6 +5,15 @@ describe('analyzeArray()', () => {
     expect(typeof analyzeArray([])).toBe('object');
   });
 
+  test('case 0: [0]', () => {
+    expect(analyzeArray([0])).toStrictEqual({
+      average: 0,
+      min: 0,
+      max: 0,
+      length: 1,
+    });
+  });
+
   test('case 1: [1, 2, 3, 4, 5]', () => {
     expect(analyzeArray([1, 2, 3, 4, 5])).toStrictEqual({
       average: 3,
