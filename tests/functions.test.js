@@ -1,17 +1,17 @@
 import { capitalize, reverseString } from '../scripts/functions';
 
 describe('capitalize()', () => {
-  test('empty string', () => {
+  test('Empty string', () => {
     expect(capitalize('')).toBe('');
   });
 
-  test('already capitalized', () => {
+  test('Already capitalized', () => {
     const string = 'The quick brown fox jumps over the lazy dog';
 
     expect(capitalize(string)).toBe(string);
   });
 
-  test('only lower case', () => {
+  test('Only lower case', () => {
     const string = 'the quick brown fox jumps over the lazy dog';
 
     expect(capitalize(string)).toBe(
@@ -19,7 +19,7 @@ describe('capitalize()', () => {
     );
   });
 
-  test('only upper case', () => {
+  test('Only upper case', () => {
     const string = 'THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG';
 
     expect(capitalize(string)).toBe(
@@ -27,7 +27,7 @@ describe('capitalize()', () => {
     );
   });
 
-  test('starts with whitespace', () => {
+  test('Starts with whitespace', () => {
     const string = '    the quick brown fox jumps over the lazy dog';
 
     expect(capitalize(string)).toBe(
@@ -35,29 +35,29 @@ describe('capitalize()', () => {
     );
   });
 
-  test('numbers', () => {
+  test('Numbers', () => {
     expect(capitalize('1234567890')).toBe('1234567890');
   });
 });
 
 describe('reverseString()', () => {
-  test('empty string', () => {
+  test('Empty string', () => {
     expect(reverseString('')).toBe('');
   });
 
-  test('one letter', () => {
+  test('One letter', () => {
     expect(reverseString('a')).toBe('a');
   });
 
-  test('palindrome', () => {
+  test('Palindrome', () => {
     expect(reverseString('deified')).toBe('deified');
   });
 
-  test('normal word', () => {
+  test('Normal word', () => {
     expect(reverseString('goblin')).toBe('nilbog');
   });
 
-  test('normal sentence', () => {
+  test('Normal sentence', () => {
     const string = 'The quick brown fox jumps over the lazy dog';
     expect(reverseString(string)).toBe(
       'god yzal eht revo spmuj xof nworb kciuq ehT',

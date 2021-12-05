@@ -1,7 +1,7 @@
 import caesarCipher from '../scripts/caesar-cipher';
 
 describe('caesarCipher()', () => {
-  test('empty string should return empty string', () => {
+  test('Empty string should return empty string', () => {
     expect(caesarCipher('')).toBe('');
   });
 
@@ -34,13 +34,13 @@ describe('caesarCipher()', () => {
   });
 
   describe('Sentences:', () => {
-    it('should handle whole sentences', () => {
+    it('Should handle whole sentences', () => {
       const sentence = 'The quick brown fox jumps over the lazy dog';
       const encryptedSentence = 'Uif rvjdl cspxo gpy kvnqt pwfs uif mbaz eph';
       expect(caesarCipher(sentence)).toBe(encryptedSentence);
     });
 
-    it('should handle punctuation', () => {
+    it('Should handle punctuation', () => {
       const sentence =
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.';
       const encryptedSentence =
