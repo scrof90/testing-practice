@@ -1,10 +1,6 @@
 import analyzeArray from '../scripts/analyze-array';
 
 describe('analyzeArray()', () => {
-  test('placeholder', () => {
-    expect(true).toBe(true);
-  });
-
   it('should return an object', () => {
     expect(typeof analyzeArray([])).toBe('object');
   });
