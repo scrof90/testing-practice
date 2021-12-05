@@ -34,7 +34,7 @@ describe('analyzeArray()', () => {
     });
 
     it('should analyze fully', () => {
-      expect(analyzeArray([1, 2, 3, 4, 5])).toStrictEqual({
+      expect(analyzeArray(arr)).toStrictEqual({
         average: 3,
         min: 1,
         max: 5,
