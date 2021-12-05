@@ -14,12 +14,32 @@ describe('analyzeArray()', () => {
     });
   });
 
-  test('case 1: [1, 2, 3, 4, 5]', () => {
-    expect(analyzeArray([1, 2, 3, 4, 5])).toStrictEqual({
-      average: 3,
-      min: 1,
-      max: 5,
-      length: 5,
+  describe('case 1: [1, 2, 3, 4, 5]', () => {
+    const arr = [1, 2, 3, 4, 5];
+
+    it('should determine an average', () => {
+      expect(analyzeArray(arr).average).toBe(3);
+    });
+
+    it('should determine a minimum', () => {
+      expect(analyzeArray(arr).min).toBe(1);
+    });
+
+    it('should determine a maximum', () => {
+      expect(analyzeArray(arr).max).toBe(5);
+    });
+
+    it('should determine length', () => {
+      expect(analyzeArray(arr).length).toBe(5);
+    });
+
+    it('should analyze fully', () => {
+      expect(analyzeArray([1, 2, 3, 4, 5])).toStrictEqual({
+        average: 3,
+        min: 1,
+        max: 5,
+        length: 5,
+      });
     });
   });
 
