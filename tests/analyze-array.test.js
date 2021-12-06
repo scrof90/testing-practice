@@ -51,13 +51,4 @@ describe('analyzeArray()', () => {
       length: 3,
     });
   });
-
-  test('case 3: [-235, 0, 77, 2]', () => {
-    expect(analyzeArray([-235, 0, 77, 2])).toStrictEqual({
-      average: -39,
-      min: -235,
-      max: 77,
-      length: 4,
-    });
-  });
 });
