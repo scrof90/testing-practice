@@ -1,4 +1,4 @@
-import analyzeArray from '../scripts/analyze-array';
+import analyzeArray from '../src/analyze-array';
 
 describe('analyzeArray()', () => {
   it('should return an object', () => {

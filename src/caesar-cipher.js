@@ -1,12 +1,11 @@
-const caesarCipher = (string) => {
-  // character codes for edge cases
-  const charCodes = {
-    upperA: 65,
-    upperZ: 90,
-    lowerZ: 122,
-  };
+const charCodes = {
+  upperA: 65,
+  upperZ: 90,
+  lowerZ: 122,
+};
 
-  return string
+const caesarCipher = (string) =>
+  string
     .split('')
     .map((char) => {
       const charCode = char.charCodeAt(0);
@@ -19,6 +18,5 @@ const caesarCipher = (string) => {
       return String.fromCharCode(charCode + 1);
     })
     .join('');
-};
 
 export default caesarCipher;

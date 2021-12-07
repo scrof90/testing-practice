@@ -1,4 +1,4 @@
-import { capitalize, reverseString } from '../scripts/functions';
+import capitalize from '../src/capitalize';
 
 describe('capitalize()', () => {
   test('Empty string', () => {
@@ -37,30 +37,5 @@ describe('capitalize()', () => {
 
   test('Numbers', () => {
     expect(capitalize('1234567890')).toBe('1234567890');
-  });
-});
-
-describe('reverseString()', () => {
-  test('Empty string', () => {
-    expect(reverseString('')).toBe('');
-  });
-
-  test('One letter', () => {
-    expect(reverseString('a')).toBe('a');
-  });
-
-  test('Palindrome', () => {
-    expect(reverseString('deified')).toBe('deified');
-  });
-
-  test('Normal word', () => {
-    expect(reverseString('goblin')).toBe('nilbog');
-  });
-
-  test('Normal sentence', () => {
-    const string = 'The quick brown fox jumps over the lazy dog';
-    expect(reverseString(string)).toBe(
-      'god yzal eht revo spmuj xof nworb kciuq ehT',
-    );
   });
 });

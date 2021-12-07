@@ -1,4 +1,4 @@
-import caesarCipher from '../scripts/caesar-cipher';
+import caesarCipher from '../src/caesar-cipher';
 
 describe('caesarCipher()', () => {
   test('Empty string should return empty string', () => {

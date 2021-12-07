@@ -1,4 +1,4 @@
-import Calculator from '../scripts/calculator';
+import Calculator from '../src/calculator';
 
 describe('Calculator', () => {
   describe('add()', () => {
